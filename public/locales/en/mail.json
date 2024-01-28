@@ -1,0 +1,6 @@
+{
+  "activate-account-html": "<div><h1>Welcome to Our Platform!</h1><p>Hello,</p><p>Thank you for joining our platform. We're excited to have you on board!</p><p>To complete your subscription and start enjoying our services, please click on the following link:</p><p><a href=\"{{activateUrl}}\">Activate Your Account</a></p><p>If you are unable to click the link directly, please copy and paste the following URL into your browser:</p><p>{{activateUrl}}</p><p>We look forward to serving you and providing a great experience. If you have any questions or need assistance, feel free to reach out to our team.</p><p>Thank you!</p></div>",
+  "activate-account-subject": "Activate your Account",
+  "reset-password-html": "<div><h1>Password Reset</h1><p>Hello,</p><p>A password reset request has been made for your account. Please use the following temporary link to update your password:</p><p><a href=\"{{newPasswordUrl}}\">Update Your Password</a></p><p>If you are unable to click the link directly, please copy and paste the following URL into your browser:</p><p>{{newPasswordUrl}}</p><p>If you did not request this password reset, please ignore this email or contact our team.</p><p>Thank you!</p></div>",
+  "reset-password-subject": "Password Reset"
+}

@@ -1,0 +1,189 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bauteilkatalog td {
+  white-space: nowrap;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+}
+
+html {
+  @apply text-slate-900;
+  scroll-behavior: smooth;
+}
+
+h1 {
+  @apply text-3xl font-extrabold tracking-tight;
+}
+
+h2 {
+  @apply text-2xl font-semibold;
+}
+
+h3 {
+  @apply text-xl font-semibold;
+}
+
+h4 {
+  @apply text-lg font-semibold;
+}
+
+h5 {
+  @apply font-semibold;
+}
+
+a.primary {
+  @apply font-semibold text-blue-800 underline-offset-2 hover:text-blue-900 hover:underline;
+}
+
+@layer base {
+  .tooltip {
+    @apply invisible absolute;
+  }
+
+  .has-tooltip:hover .tooltip {
+    @apply visible z-50;
+  }
+}
+
+@layer components {
+  [type="text"],
+  [type="email"],
+  [type="url"],
+  [type="password"],
+  [type="number"],
+  [type="date"],
+  [type="datetime-local"],
+  [type="month"],
+  [type="search"],
+  [type="tel"],
+  [type="time"],
+  [type="week"],
+  [multiple],
+  textarea,
+  select {
+    @apply rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm;
+  }
+
+  .link {
+    @apply text-blue-600 underline underline-offset-4 hover:text-blue-900;
+  }
+  .disabled-link {
+    @apply pointer-events-none text-gray-400 no-underline;
+  }
+
+  .button {
+    @apply flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium shadow-sm;
+  }
+  .button.blue {
+    @apply bg-blue-500 text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+  }
+  .button.blue.ghost {
+    @apply bg-blue-100 text-blue-500 hover:bg-blue-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+  }
+  .button.yellow {
+    @apply bg-yellow-500 text-white hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2;
+  }
+  .button.yellow.ghost {
+    @apply bg-yellow-100 text-yellow-600 hover:bg-yellow-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2;
+  }
+  .button.red {
+    @apply bg-red-500 text-white hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2;
+  }
+  .button.red.ghost {
+    @apply bg-red-50 text-red-500 hover:bg-red-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2;
+  }
+  .button.disabled {
+    @apply pointer-events-none cursor-not-allowed bg-slate-100 text-slate-500;
+  }
+  .button svg {
+    @apply h-4 w-4;
+  }
+
+  /* .button {
+    @apply inline-flex items-center gap-2 rounded-md border border-transparent bg-blue-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+  }
+  .disabled {
+    @apply bg-blue-600 opacity-40 hover:bg-blue-600;
+  } */
+
+  .ghost-button {
+    @apply inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+  }
+
+  .badge-gray {
+    @apply inline-flex items-center rounded-full bg-gray-100 px-3 py-0.5 text-sm font-medium text-gray-800;
+  }
+  .badge-red {
+    @apply inline-flex items-center rounded-full bg-red-100 px-3 py-0.5 text-sm font-medium text-red-800;
+  }
+  .badge-yellow {
+    @apply inline-flex items-center rounded-full bg-yellow-100 px-3 py-0.5 text-sm font-medium text-yellow-800;
+  }
+  .badge-green {
+    @apply inline-flex items-center rounded-full bg-green-100 px-3 py-0.5 text-sm font-medium text-green-800;
+  }
+  .badge-blue {
+    @apply inline-flex items-center rounded-full bg-blue-100 px-3 py-0.5 text-sm font-medium text-blue-800;
+  }
+  .badge-indigo {
+    @apply inline-flex items-center rounded-full bg-indigo-100 px-3 py-0.5 text-sm font-medium text-indigo-800;
+  }
+  .badge-purple {
+    @apply inline-flex items-center rounded-full bg-purple-100 px-3 py-0.5 text-sm font-medium text-purple-800;
+  }
+  .badge-pink {
+    @apply inline-flex items-center rounded-full bg-pink-100 px-3 py-0.5 text-sm font-medium text-pink-800;
+  }
+}
+
+@layer utilities {
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+
+  .lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 38px;
+    height: 38px;
+  }
+  .lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    margin: 4px;
+    border: 4px solid #ccc;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #ccc transparent transparent transparent;
+  }
+  .lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+  }
+  .lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+  }
+  .lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+  }
+  @keyframes lds-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
